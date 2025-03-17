@@ -1,0 +1,124 @@
+/* Style général */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(img/SEEG\ 1.png) no-repeat center center scroll;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    overflow-y: auto;
+}
+
+@keyframes winEffect {
+    0% {
+        background-position: 50% 50%;
+    }
+    25% {
+        background-position: 48% 52%;
+    }
+    50% {
+        background-position: 52% 48%;
+    }
+    75% {
+        background-position: 49% 51%;
+    }
+    100% {
+        background-position: 50% 50%;
+    }
+}
+
+/* Conteneur principal */
+.container {
+    min-height: 80vh;
+    background: rgba(255, 255, 255, 0.2); /* Background with transparency for glassmorphism */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 800px; /* Augmentation de la largeur maximale */
+    width: 90%; /* Augmentation de la largeur */
+    position: relative;
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Border to enhance glass effect */
+}
+
+/* Titre */
+h1, h3, h4, h5 {
+    margin-bottom: 15px;
+    color: rgb(244, 248, 244);
+}
+
+/* Rotation continue du logo */
+.logo img {
+    display: block;
+    margin: 20px auto;
+    width: 200px;  /* Augmentation de la largeur */
+    max-width: 200px;  /* Augmentation de la largeur maximale */
+    height: auto;
+    animation: rotation 5s linear infinite;
+    background-color: white;
+    border-radius: 1000px;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Formulaire */
+form {
+    text-align: left;
+}
+
+/* Champs uniformes */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Bouton */
+button {
+    width: 50%;
+    padding: 12px;
+    border: none;
+    background: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: center;
+    transition: all 0.3s ease; /* Ajout d'une transition fluide */
+}
+
+button:hover {
+    background: #06783c; /* Changement de couleur de fond au survol */
+    transform: scale(1.05); /* Agrandissement du bouton */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre autour du bouton */
+}
+
+button:active {
+    transform: scale(1); /* Réduit la taille quand on clique pour simuler un effet de pression */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre plus petite quand on clique */
+}
+
+/* Footer fixe */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

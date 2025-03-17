@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NKONGÔ | Sondage SEEG POG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>NKONGÔ</h1>
+        <h2>Collectif Citoyen pour la Lutte contre la Vie Chère dans l’Ogooué-Maritime</h2>
+
+        <div class="logo">
+            <img src="img/Logo Final.png" alt="Logo de NKONGÔ">
+        </div>
+
+        <h1>Sondage sur la Qualité des Services de la SEEG Port-Gentil</h1>
+        <p>L’objectif de ces sondages est de recueillir des données objectives sur le ressenti des populations et d’identifier les principales problématiques rencontrées. 
+            Ces résultats nous permettront d’appuyer nos actions et revendications auprès des autorités et des entreprises concernées.</p>
+
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name">Nom (Optionnel) :</label>
+                <input type="text" id="name" name="nom" placeholder="Entrez votre nom">
+            </div>
+            <div class="form-group">
+                <label for="email">Adresse E-mail :</label>
+                <input type="email" id="email" name="email" placeholder="Adresse E-mail" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Numéro de téléphone :</label>
+                <input type="number" id="phone" name="telephone" placeholder="Numéro de téléphone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="arrondissement">Arrondissement :</label>
+                <input type="text" id="arrondissement" name="arrondissement" placeholder="votre arrondissement" required>
+            </div>
+
+            <div class="form-group">
+                <label for="quartier">Quartier :</label>
+                <input type="text" id="quartier" name="quartier" placeholder="votre quartier" required>
+            </div>
+
+            <div class="form-group">
+                <label for="temps">Depuis combien de temps êtes-vous client(e) de la SEEG ?</label>
+                <select id="temps" name="temps_utilisation">
+                    <option value="moins_dun_an">Moins d’un an</option>
+                    <option value="1_a_3_ans">1 à 3 ans</option>
+                    <option value="plus_de_3_ans">Plus de 3 ans</option>
+                </select>
+            </div>
+
+            <h3>Coupure de fourniture en eau et en éléctricité</h3>
+            <div class="form-group">
+                <label for="date">Depuis quand subissez-vous les mauvais traitements de la SEEG ?</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <h3>Fourniture en Électricité</h3>
+            <div class="form-group">
+                <label for="qualite">Qualité des services :</label>
+                <select name="qualite_electricite">
+                    <option value="excellente">Excellente</option>
+                    <option value="bonne">Bonne</option>
+                    <option value="moyenne">Moyenne</option>
+                    <option value="mauvaise">Mauvaise</option>
+                    <option value="tres_mauvaise">Très Mauvaise</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="coupures">Subissez-vous des coupures fréquentes ?</label>
+                <select name="coupures">
+                    <option value="oui_hebdo">Oui, plusieurs fois par semaine</option>
+                    <option value="oui_mensuel">Oui, quelques fois par mois</option>
+                    <option value="rarement">Rarement</option>
+                    <option value="non">Non</option>
+                </select>
+            </div>
+
+            <h3>Fourniture en Eau Potable</h3>
+            <div class="form-group">
+                <label for="qualite_eau">Qualité de l’eau :</label>
+                <select name="qualite_eau">
+                    <option value="excellente">Excellente</option>
+                    <option value="bonne">Bonne</option>
+                    <option value="moyenne">Moyenne</option>
+                    <option value="mauvaise">Mauvaise</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="qualite_eau">La qualité d'eau fournie par la SEEG est-elle propre à la consommation ?</label>
+                <select name="qualite_eau">
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+                <label for="justification">Justifiez votre réponse :</label>
+                <textarea id="justification" name="justification_qualite_eau" rows="4" placeholder="Entrez votre justification ici!"></textarea>
+            </div>
+
+            <h3>Service Communication</h3>
+            <div class="form-group">
+                <label for="sce_communication">Êtes-vous satisfait du service communication de la SEEG ?</label>
+                <select name="sce_communication">
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+                <label for="justification_communication">Justifiez votre réponse :</label>
+                <textarea id="justification_communication" name="justification_sce_communication" rows="4" placeholder="Entrez votre justification ici!"></textarea>
+            </div>
+
+            <h3>Service Dépannage</h3>
+            <div class="form-group">
+                <label for="depannage">Êtes-vous satisfait du service dépannage de la SEEG ?</label>
+                <select name="depannage">
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+                <label for="justification_depannage">Justifiez votre réponse :</label>
+                <textarea id="justification_depannage" name="justification_sce_depannage" rows="4" placeholder="Entrez votre justification ici!"></textarea>
+            </div>
+
+            <h3>Approche illégale</h3>
+            <div class="form-group">
+                <label for="approche_illegale">Avez-vous été approché par un agent de la SEEG pour un branchement direct ou tout autre besoin?</label>
+                <select name="approche_illegale">
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+                <label for="justification_approche">Justifiez votre réponse :</label>
+                <textarea id="justification_approche" name="justification_approche_illegale" rows="4" placeholder="Entrez votre justification ici!"></textarea>
+            </div>
+
+            <h3>Demande de compteur</h3>
+            <div class="form-group">
+                <label for="demande_compteur">Avez-vous soumis une demande de compteur auprès de la SEEG ?</label>
+                <select name="demande_compteur">
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+                <label for="type_compteur">Type de compteur demandé :</label>
+                <select id="type_compteur" name="type_compteur[]" multiple>
+                    <option value="compteur_electricite">Compteur d'électricité</option>
+                    <option value="compteur_eau">Compteur d'eau</option>
+                </select>
+                <label for="justification_compteur">Justifiez votre réponse :</label>
+                <textarea id="justification_compteur" name="justification_demande_compteur" rows="4" placeholder="Entrez votre justification ici!"></textarea>
+            </div>
+
+            <h3>Installations anarchiques</h3>
+            <div class="form-group">
+                <label for="installation_anarchique">Connaissez-vous des installations anarchiques dans votre secteur?</label>
+                <select name="installation_anarchique">
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="connaissance_numero">Connaissez-vous le numéro du service dépannage?</label>
+                <select name="connaissance_numero">
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+            </div>
+
+            <h3>Connaissance supplémentaire</h3>
+            <div class="form-group">
+                <label for="connaissance_prelevement">Aviez-vous connaissance des prélèvements suivants sur vos consommations? :</label>
+                <select id="connaissance_prelevement" name="connaissance_prelevement[]" multiple>
+                    <optgroup label="TVA">
+                        <option value="oui_connaissance_tva">Oui</option>
+                        <option value="non_connaissance_tva">Non</option>
+                    </optgroup>
+                    <optgroup label="CSE">
+                        <option value="oui_connaissance_cse">Oui</option>
+                        <option value="non_connaissance_cse">Non</option>
+                    </optgroup>
+                    <optgroup label="CSS">
+                        <option value="oui_connaissance_css">Oui</option>
+                        <option value="non_connaissance_css">Non</option>
+                    </optgroup>
+                    <optgroup label="REDEVANCE MENSUELLE">
+                        <option value="oui_connaissance_redevance">Oui</option>
+                        <option value="non_connaissance_redevance">Non</option>
+                    </optgroup>
+                    <optgroup label="COM">
+                        <option value="oui_connaissance_com">Oui</option>
+                        <option value="non_connaissance_com">Non</option>
+                    </optgroup>
+                </select>
+                <input type="text" name="connaissance_supplementaire" placeholder="Partagez vos connaissances ici!" />
+            </div>
+
+            <h3>Déclaration des Pertes des appareils suite aux services de la SEEG</h3>
+            <div class="form-group">
+                <label for="appareils_endommages">Liste des appareils endommagés :</label>
+                <select id="appareils_endommages" name="appareils_endommages[]" multiple>
+                    <option value="television">Télévision</option>
+                    <option value="refrigerateur">Réfrigérateur</option>
+                    <option value="ordinateur">Ordinateur</option>
+                    <option value="climatiseur">Climatiseur</option>
+                    <option value="onduleur">Onduleur</option>
+                    <option value="sono">Sono</option>
+                    <option value="congelateur">Congélateur</option>
+                    <option value="lave-linge">Lave-Linge</option>
+                    <option value="seche-linge">Sèche-Linge</option>
+                    <option value="lave-vaisselle">Lave-Vaisselle</option>
+                    <option value="four-electrique">Four Électrique</option>
+                    <option value="autre">Autre</option>
+                </select>
+                <input type="text" name="appareil_autre" placeholder="Si autre, précisez ici" />
+            </div>
+
+            <div class="form-group">
+                <label for="quantite">Quantité d'appareils endommagés :</label>
+                <input type="number" id="quantite" name="quantite_appareils_endommages" placeholder="Renseignez la quantité de vos appareils" required>
+            </div>
+
+            <h4>Justifiez les appareils endommagés</h4>
+            <div class="form-group">
+                <label for="device-image">Téléversez des images des produits et appareils endommagés :</label>
+                <input type="file" id="device-image" name="images-appareil[]" accept="image/*" multiple>
+            </div>
+
+            <div class="form-group">
+                <label for="document">Téléversez des justificatifs des produits et appareils (facture, rapport, etc.) :</label>
+                <input type="file" id="document" name="document[]" accept=".pdf,.docx,.jpg,.png" multiple>
+            </div>
+            
+            <div class="form-group">
+                <label for="comments">Suggestions ou commentaires supplémentaires :</label>
+                <textarea id="comments" name="commentaires" rows="4" placeholder="Entrez vos commentaires et suggestions ici!"></textarea>
+            </div>
+    
+            <div class="form-group">
+                <button type="submit">Soumettre</button>
+            </div>
+            <p>Merci pour votre participation !</p>
+            <br><br>
+        </form>
+    </div>
+    <footer>
+        <a href="https://lionel-johnson.github.io/LionelConcept">&copy; LionelConcept | 02/2025 </a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
